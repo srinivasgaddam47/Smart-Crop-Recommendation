@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Crop Recommend</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="body-container">
+      <!-- =============================
+           INTRO
+      ============================== -->
+
+      <section class="introduction">
+        <div class="intro">
+          <h1>Smart Crop Recommendation System</h1>
+
+          <p>
+            The system analyzes soil, location, land size, and previous crop to
+            recommend the best crop and fertilizer using ML.
+          </p>
+        </div>
+      </section>
+
+      <!-- =============================
+           MAIN SECTION
+      ============================== -->
+
+      <section class="inputs">
+        <div class="input-fields">
+          <!-- =============================
+               LEFT SIDE
+          ============================== -->
+
+          <div class="input-left">
+            <!-- INPUT FORM -->
+            <div class="input-summary">
+              <div class="summary-heading">Input Summary</div>
+
+              <!-- ROW 1 -->
+              <div class="summary-up">
+                <!-- LOCATION -->
+                <div class="input-box">
+                  <label for="locationInput"> Location </label>
+
+                  <div class="location-wrapper">
+                    <input
+                      id="locationInput"
+                      type="text"
+                      class="location-search"
+                      placeholder="Select location"
+                      autocomplete="off"
+                    />
+
+                    <div class="location-search-list"></div>
+                  </div>
+                </div>
+
+                <!-- SOIL -->
+                <div class="input-box">
+                  <label for="soilInput"> Soil Type </label>
+
+                  <div class="soil-wrapper">
+                    <input
+                      id="soilInput"
+                      type="text"
+                      class="soil-search"
+                      placeholder="Select soil type"
+                      autocomplete="off"
+                    />
+
+                    <div class="soil-search-list"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ROW 2 -->
+              <div class="summary-down">
+                <!-- LAND SIZE -->
+                <div class="input-box">
+                  <label for="sizeInput"> Land Size </label>
+
+                  <div class="size-wrapper">
+                    <input
+                      id="sizeInput"
+                      type="text"
+                      class="size-search"
+                      placeholder="Choose land size"
+                      autocomplete="off"
+                    />
+
+                    <div class="size-search-list"></div>
+                  </div>
+                </div>
+
+                <!-- PREVIOUS CROP -->
+                <div class="input-box">
+                  <label for="prevInput"> Previous Crop </label>
+
+                  <div class="prev-wrapper">
+                    <input
+                      id="prevInput"
+                      type="text"
+                      class="prev-search"
+                      placeholder="Choose previous crop"
+                      autocomplete="off"
+                    />
+
+                    <div class="prev-search-list"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BUTTON -->
+              <button type="button" class="predict-btn">
+                Get Recommendation
+              </button>
+            </div>
+
+            <!-- =============================
+                 LEFT RESULT CARD
+            ============================== -->
+
+            <div class="input-result">
+              <div class="dot-card-header">
+                <div class="dot-crop-block">
+                  <span class="dot-label"> Best Crop </span>
+
+                  <h1 class="dot-crop-name">---</h1>
+                </div>
+
+                <div class="dot-score-block">
+                  <span class="dot-label"> Confidence </span>
+
+                  <h2 class="dot-score">--%</h2>
+                </div>
+              </div>
+
+              <!-- DOTTED BAR -->
+              <div class="dot-progress-row" id="dot-progress-row"></div>
+
+              <!-- INTERCROP -->
+              <div class="dot-intercrop">Intercrop: ---</div>
+            </div>
+          </div>
+
+          <!-- =============================
+               RIGHT SIDE PANEL
+          ============================== -->
+
+          <div class="input-right">
+            <div class="input-info">
+              <div class="default-state">
+                <h3>Ready to grow better?</h3>
+
+                <p>
+                  Enter your farm details and get the best crop recommendation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
